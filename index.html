@@ -1,94 +1,116 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html><html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>به یاد باباجی 🤍</title>
-  <meta name="description" content="یادبود دیجیتال باباجی؛ عکس‌ها، صداها و خاطراتی که برای همیشه می‌مانند.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-photo" aria-label="جای عکس باباجی"></div>
-    <div class="hero-content">
-      <p class="eyebrow">برای همیشه در قلب ما</p>
-      <h1>به یاد باباجی 🤍</h1>
-      <p class="intro">صدایش، خاطراتش و لحظه‌هایی که با او داشتیم، برای همیشه با ما می‌مانند.</p>
-      <a class="button" href="#memories">دیدن خاطرات</a>
-    </div>
-  </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jafar Rahmdel | جعفر رحم دل</title>  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <main>
-    <section class="quote">
-      <p>«آدم‌ها می‌روند، اما ردِ دوست داشتنشان می‌ماند.»</p>
-    </section>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111111;
+      color: #f3f3f3;
+      font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-    <section id="memories" class="section">
-      <h2>خاطرات باباجی</h2>
-      <p class="section-intro">این صفحه قرار نیست تمام شود؛ هر وقت عکس، صدا یا خاطره‌ای تازه پیدا کردیم، می‌توانیم آن را اضافه کنیم.</p>
+    .page {
+      width: 100%;
+      max-width: 700px;
+      padding: 45px 25px;
+    }
 
-      <div class="cards">
-        <article class="card">
-          <div class="icon">📷</div>
-          <h3>عکس‌ها</h3>
-          <p>لحظه‌هایی از زندگی باباجی، از قدیمی‌ترین عکس‌ها تا خاطرات خانوادگی.</p>
-          <a href="#photos">ورود به گالری</a>
-        </article>
+    .forever {
+      direction: ltr;
+      font-size: 25px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
 
-        <article class="card">
-          <div class="icon">🎙️</div>
-          <h3>صدای باباجی</h3>
-          <p>صداهایی که می‌خواهیم سال‌ها بعد هم بتوانیم دوباره بشنویم.</p>
-          <a href="#audio">شنیدن صداها</a>
-        </article>
+    .symbols {
+      font-size: 27px;
+      margin-bottom: 30px;
+    }
 
-        <article class="card">
-          <div class="icon">📝</div>
-          <h3>خاطرات خانواده</h3>
-          <p>هرکس می‌تواند خاطره‌ای از باباجی بنویسد تا این دفتر همیشه ادامه داشته باشد.</p>
-          <a href="#stories">خواندن خاطرات</a>
-        </article>
-      </div>
-    </section>
+    .photo {
+      width: 100%;
+      max-width: 520px;
+      height: 330px;
+      margin: 0 auto 32px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      background: #1c1c1c;
+      border: 1px solid #333333;
+    }
 
-    <section id="photos" class="section alt">
-      <h2>گالری عکس‌ها</h2>
-      <div class="gallery">
-        <div class="placeholder">عکس باباجی<br><small>اینجا قرار می‌گیرد</small></div>
-        <div class="placeholder">عکس خانوادگی<br><small>اینجا قرار می‌گیرد</small></div>
-        <div class="placeholder">یک خاطره قدیمی<br><small>اینجا قرار می‌گیرد</small></div>
-      </div>
-    </section>
+    .name {
+      direction: ltr;
+      font-size: 29px;
+      margin: 10px 0 15px;
+    }
 
-    <section id="audio" class="section">
-      <h2>صدای باباجی</h2>
-      <div class="audio-box">
-        <p>🎙️ فایل صوتی باباجی</p>
-        <audio controls>
-          <source src="assets/babaji-voice.mp3" type="audio/mpeg">
-          مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
-        </audio>
-        <small>بعداً فایل واقعی صدا را در پوشه assets قرار می‌دهیم.</small>
-      </div>
-    </section>
+    .years {
+      direction: ltr;
+      font-size: 19px;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+      color: #cccccc;
+    }
 
-    <section id="stories" class="section alt">
-      <h2>خاطرات خانواده</h2>
-      <div class="story">
-        <h3>یک صفحه برای خاطره‌ها</h3>
-        <p>اینجا می‌توانیم خاطرات هرکدام از اعضای خانواده را با نام خودشان ثبت کنیم؛ و در آینده هم خاطرات جدید اضافه کنیم.</p>
-      </div>
-    </section>
+    .quote {
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 2.2;
+      color: #dddddd;
+      max-width: 620px;
+      margin: auto;
+    }
 
-    <section class="section final-note">
-      <div class="leaf">🌿</div>
-      <h2>برای همیشه</h2>
-      <p>این صفحه برای نگه داشتن چیزهایی ساخته شده که نمی‌خواهیم فراموش شوند.</p>
-    </section>
-  </main>
+    @media (max-width: 600px) {
+      .page {
+        padding: 35px 18px;
+      }
 
-  <footer>
-    <p>با عشق، برای یاد باباجی 🤍</p>
-  </footer>
-</body>
+      .forever {
+        font-size: 22px;
+      }
+
+      .photo {
+        height: 250px;
+      }
+
+      .name {
+        font-size: 24px;
+      }
+
+      .quote {
+        font-size: 15px;
+      }
+    }
+  </style></head><body>  <main class="page"><div class="forever">Forever in our hearts</div>
+
+<div class="symbols">🕊️🖤</div>
+
+<img
+  class="photo"
+  src="assets/jafar.jpg"
+  alt="Jafar Rahmdel"
+>
+
+<div class="name">Jafar Rahmdel _ جعفر رحم دل</div>
+
+<div class="years">1325 — 1405</div>
+
+<div class="quote">
+  مردان من، بجنگید تا آخرین نفس؛ زندگی جاودانی نیست ولی مرگ با افتخار هر انسانی را جاودانه می‌سازد — 《آریو برزن》
+</div>
+
+  </main></body>
 </html>
+    
